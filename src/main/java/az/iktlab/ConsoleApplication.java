@@ -1,5 +1,6 @@
 package az.iktlab;
 
+import az.iktlab.booking.controller.BookController;
 import az.iktlab.controller.Controller;
 import az.iktlab.enums.Operation;
 import az.iktlab.exceptions.OperationNotFoundException;
@@ -42,15 +43,15 @@ public class ConsoleApplication {
                 Thread.sleep(2000);
             }
             else if(Validator.haveOperation.test(operation,Operation.BOOK)){
-                controller.book();
+                BookController.book();
                 Thread.sleep(2000);
             }
             else if(Validator.haveOperation.test(operation,Operation.CANCEL)){
-                controller.cancel();
+                BookController.cancel();
                 Thread.sleep(2000);
             }
             else if(Validator.haveOperation.test(operation,Operation.FLIGHTS)){
-                controller.flights();
+                BookController.myFlights();
                 Thread.sleep(2000);
             }
             else if(Validator.haveOperation.test(operation,Operation.EXIT)){
